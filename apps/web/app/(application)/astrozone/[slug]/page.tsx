@@ -1,7 +1,6 @@
 "use client";
 
 import { ConsultantSlider } from "@/components/consultant-slider";
-import React from "react";
 import { AstrologerCard } from "../../explore/page";
 import { CircleChevronDown } from "lucide-react";
 

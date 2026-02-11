@@ -22,7 +22,7 @@ function NotificationsPage() {
       <div className="max-w-[1020px] mx-auto">
         <h2 className="text-secondary font-normal  mb-3">New</h2>
 
-        <NotificationItem text={notifications[0].text} />
+        <NotificationItem text={notifications[0]?.text} />
 
         {/* Earlier Section */}
         <h2 className="text-secondary font-normal  mt-8 mb-3">Earlier</h2>
@@ -39,7 +39,7 @@ function NotificationsPage() {
 
 export default NotificationsPage;
 
-function NotificationItem({ text }: { text: string }) {
+function NotificationItem({ text }: { text?: string }) {
   return (
     <div className="flex items-center justify-between bg-purple-50 rounded-lg px-4 py-3">
       <div className="flex items-center gap-3">
