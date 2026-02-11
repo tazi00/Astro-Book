@@ -13,6 +13,11 @@
 
     "esModuleInterop": true,
     "resolveJsonModule": true,
-    "isolatedModules": true
+    "isolatedModules": true,
+    "baseUrl": ".",
+    "paths": {
+      "@astrobook/types": ["packages/types/src"],
+      "@astrobook/utils": ["packages/utils/src"]
+    }
   }
 }
