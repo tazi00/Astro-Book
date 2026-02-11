@@ -1,0 +1,8 @@
+{
+  "name": "@astrobook/utils",
+  "version": "0.0.1",
+  "private": false,
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "sideEffects": false
+}

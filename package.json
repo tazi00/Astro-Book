@@ -1,0 +1,22 @@
+{
+  "name": "astrobook",
+  "private": true,
+  "packageManager": "pnpm@10.28.0",
+  "scripts": {
+    "dev:web": "pnpm --filter web dev",
+    "build:web": "pnpm --filter web build"
+  },
+  "pnpm": {
+    "overrides": {
+      "react": "19.1.0",
+      "react-dom": "19.1.0"
+    },
+    "packageExtensions": {
+      "expo-keep-awake": {
+        "dependencies": {
+          "react": "19.1.0"
+        }
+      }
+    }
+  }
+}
