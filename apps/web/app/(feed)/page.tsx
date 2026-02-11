@@ -1,5 +1,5 @@
 import React from "react";
-import StorySlider from "@/components/story-slider";
+import StorySlider from "../../components/story-slider";
 
 function HomePage() {
   return (

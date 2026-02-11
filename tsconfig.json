@@ -1,8 +1,8 @@
 {
   "files": [],
   "references": [
-    { "path": "apps/web" },
-    { "path": "apps/mobile" },
-    { "path": "packages/types" }
+    { "path": "packages/types" },
+    { "path": "packages/utils" },
+    { "path": "apps/server" }
   ]
 }
