@@ -1,9 +1,13 @@
 import React from "react";
-import StorySlider from "../../components/story-slider";
+import StorySlider from "@/components/story-slider";
+import type { User } from "@astrobook/types";
+import { createGreeting } from "@astrobook/utils";
 
 function HomePage() {
+  const user: User = { email: "riki@gmail.com", id: "1" };
   return (
     <div className="lg:overflow-y-scroll md:pt-0 pt-[52px]">
+      {createGreeting(user.email)}
       <div
         className="top-0 left-0 w-full h-[2px] 
 bg-[linear-gradient(to_right,white_0%,white_20%,gray_50%,white_80%,white_100%)]"

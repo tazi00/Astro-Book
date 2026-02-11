@@ -3,7 +3,7 @@ import type { User } from "@astrobook/types";
 import "dotenv/config";
 import { pool } from "./db.js";
 
-import { createGreeting } from "@astrobook/utils";
+import createGreeting from "@astrobook/utils";
 const app = express();
 const port = 3001;
 

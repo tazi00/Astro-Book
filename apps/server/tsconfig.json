@@ -1,14 +1,17 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
+    "module": "NodeNext",
     "outDir": "dist",
     "rootDir": "src",
-    "composite": true,
-    "moduleResolution": "node"
+    "paths": {
+      "@astrobook/types": ["../../packages/types/src/index.ts"],
+      "@astrobook/utils": ["../../packages/utils/src/index.ts"]
+    }
   },
+  "include": ["src"],
   "references": [
     { "path": "../../packages/types" },
     { "path": "../../packages/utils" }
-  ],
-  "include": ["src"]
+  ]
 }

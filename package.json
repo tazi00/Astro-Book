@@ -3,22 +3,18 @@
   "private": true,
   "packageManager": "pnpm@10.28.0",
   "scripts": {
-    "build": "tsc -b",
+    "dev": "concurrently \"pnpm dev:packages\" \"pnpm dev:server\" \"pnpm dev:web\"",
+    "dev:packages": "pnpm -r --filter ./packages/** dev",
     "dev:server": "pnpm --filter server dev",
     "dev:web": "pnpm --filter web dev",
-    "dev:mobile": "pnpm --filter mobile start"
+    "build": "pnpm build:packages && pnpm build:server && pnpm build:web",
+    "build:packages": "pnpm -r --filter \"@astrobook/*\" build",
+    "build:server": "pnpm --filter server build",
+    "build:web": "pnpm --filter web build",
+    "clean": "rm -rf node_modules pnpm-lock.yaml packages/*/dist"
   },
-  "pnpm": {
-    "overrides": {
-      "react": "19.1.0",
-      "react-dom": "19.1.0"
-    },
-    "packageExtensions": {
-      "expo-keep-awake": {
-        "dependencies": {
-          "react": "19.1.0"
-        }
-      }
-    }
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "typescript": "^5.3.3"
   }
 }

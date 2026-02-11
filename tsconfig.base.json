@@ -2,22 +2,17 @@
   "compilerOptions": {
     "target": "ES2022",
     "module": "ESNext",
-    "lib": ["DOM", "DOM.Iterable", "ES2022"],
-
+    "lib": ["ES2022"],
     "strict": true,
-    "noImplicitAny": true,
-    "noUncheckedIndexedAccess": true,
-    "moduleResolution": "node",
-    "forceConsistentCasingInFileNames": true,
-    "skipLibCheck": true,
-
     "esModuleInterop": true,
+    "skipLibCheck": true,
+    "moduleResolution": "nodenext",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "baseUrl": ".",
-    "paths": {
-      "@astrobook/types": ["packages/types/src"],
-      "@astrobook/utils": ["packages/utils/src"]
-    }
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "composite": true,
+    "incremental": true
   }
 }
